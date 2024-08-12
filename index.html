@@ -12,25 +12,420 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- aos css link -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=DM+Serif+Text:ital@0;1&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playwrite+MX:wght@100..400&family=Playwrite+NG+Modern:wght@100..400&family=Playwrite+US+Trad:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <div id="loading">
-        <!-- Spinner -->
-       <h1>loading....</h1>
-       </div>
-    
-        <div id="maincontent" style="display: none;">
-    <h1>main content</h1>
+    <!-- <div id="loading">
+        <h1>loading....</h1>
+    </div> -->
+
+    <div id="maincontent">
+        <!-- prev button -->
+        <button class="prev"><i class="fa-solid fa-circle-left"></i></button>
+        <!-- prev button -->
+
+        <!-- book -->
+        <div id="book" class="book">
+            <!-- page 1 -->
+            <div id="page1" class="paper">
+                <div class="front" id="cover">
+                    <div id="front1" class="front-content">
+                        <div class="image">
+                            <img src="./img/cover_pic-removebg-preview.png" alt="">
+                        </div>
+                        <div style="margin-bottom: none;" class="headings">
+                            <h1 >portfolio</h1>
+                        </div>
+
+                        <div class="heading-bottom">
+                            <!-- <h2>zainab siddiqui</h2> -->
+                            <h2>frontend webdeveloper</h2>
+                            <h4>
+                                <ul>
+                                    <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+                                    <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href=""><i class="fa-solid fa-at"></i></a></li>
+                                    <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+
+                                </ul>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="back1" class="back-content">
+                        <div class="image">
+
+                        </div>
+                        <h1>zainab siddiqui</h1>
+                        <a href="./ZAINAB SIDDIQUI.CV.pdf" download="Zainab Siddiqui.pdf" class="download-cv-btn">
+                            <i class="fa-solid fa-download"></i> Download CV
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- page 2 -->
+            <div id="page2" class="paper">
+                <div class="front">
+                    <div id="front2" class="front-content">
+                        <h1>about</h1>
+                        <p>
+                            Hello! I'm Zainab Siddiqui, a Frontend Web Developer with a passion for crafting beautiful,
+                            responsive, dynamic, and user-friendly websites. With a background in the IT industry, I
+                            specialize in full stack development, focusing on creating interactive and intuitive web
+                            experiences. I thrive on developing user-centered solutions and am dedicated to achieving my
+                            professional goals. Outside of work, you can find me immersed in a good book or enjoying
+                            some gaming.
+                        </p>
+                        <div class="skills">
+                            <h1>skills</h1>
+                            <img src="./img/html.png" title="html" alt="">
+                            <img src="./img/css.png" title="css" alt="">
+                            <img src="./img/js.png" title="javascript" alt="">
+                            <img src="./img/typescript.png" title="typescript" alt="">
+                            <img src="./img/bootstrap.jpeg" title="bootstrap" alt="">
+                            <img src="./img/firebase.png" title="firebase" alt="">
+                            <img src="./img/github.jpeg" title="github" alt="">
+                            <img src="./img/netlify.png" title="netlify" alt="">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="back2" class="back-content">
+                        <div class="progress">
+
+                        </div>
+                        <h1>soft skills</h1>
+                        <div class="right">
+                            <ul>
+                                <li>1. Leadership</li>
+                                <li>2. Creativity</li>
+                                <li>3. Adaptability</li>
+                            </ul>
+
+                        </div>
+                        <div class="left">
+                            <ul>
+                                <li>4. Teamwork</li>
+                                <li>5. Communication</li>
+
+                        </div>
+                        <div class="education">
+                            <h1>education</h1>
+                            <div class="education-one ed">
+                                <div class="ed-icon">
+                                    <i class="fa-solid fa-school"></i>
+                                </div>
+                                <div class="ed-desc">
+                                    <h4>matriculation-2021 <br> hamdard public school</h4>
+                                </div>
+
+                            </div>
+                            <div class="education-two ed">
+                                <div class="ed-icon">
+                                    <i class="fa-solid fa-building-columns"></i>
+                                </div>
+                                <div class="ed-desc">
+                                    <h4>intermediate-2023 <br> BAMM PECHS GOVT. COLLEGE FOR WOMEN</h4>
+
+                                </div>
+
+                            </div>
+                            <div class="education-three ed">
+                                <div class="ed-icon">
+                                    <i class="fa-solid fa-user-graduate"></i>
+                                </div>
+                                <div class="ed-desc">
+                                    <h4>Bachelors in physiology - continue <br> university of karachi</h4>
+
+                                </div>
+
+                            </div>
+                            <div class="education-four ed">
+                                <div class="ed-icon">
+                                    <i class="fa-solid fa-laptop-code"></i>
+                                </div>
+                                <div class="ed-desc">
+                                    <h4>frontend webdevelopment-2024 <br> tech force pakistan </h4>
+                                </div>
+
+                            </div>
+                            <div class="education-five ed">
+                                <div class="ed-icon">
+                                    <i class="fa-solid fa-laptop-code"></i>
+                                </div>
+                                <div class="ed-desc">
+                                    <h4>cloud applied generative AI-continue <br>governor sindh initiative</h4>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- page 3 -->
+            <div id="page3" class="paper">
+                <div class="front">
+                    <div id="front3" class="front-content">
+                        <h1>my work</h1>
+                        <div class="my-work">
+
+                            <div class="work-item">
+                                <div class="work-title">
+                                    <h2>melody stream</h2>
+                                </div>
+                                <video src="./videos/music app.mp4" autoplay preload="true" controls loop></video>
+
+                                <div class="work-description">
+                                    <details>
+                                        <summary> MelodyStream is a music streaming website that I developed to provide
+                                            a
+                                            seamless listening experience. Featuring a dynamic song display and instant
+                                        </summary>
+                                        <p>
+                                            playlist updates, the site is built using HTML, CSS, and JavaScript. It
+                                            showcases my skills in creating responsive, user-friendly web applications.
+                                        </p>
+                                    </details>
+                                    <h2>project links</h2>
+
+                                    <div class="links">
+
+                                        <div class="github-link">
+                                            <a href="https://github.com/zainabsiddiqui833251/melody-stream.git"
+                                                target="_blank">
+                                                <i class="fa-brands fa-github"></i>
+                                                <h5>github</h5>
+                                            </a>
+                                        </div>
+                                        <div class="netlify-link">
+                                            <a href="https://wonderful-raindrop-63050d.netlify.app" target="_blank">
+                                                <img src="https://cdn.worldvectorlogo.com/logos/netlify.svg"
+                                                    alt="Netlify icon" width="30">
+                                                <h5>netlify</h5>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="back3" class="back-content">
+                        <div class="my-work">
+
+                            <div class="work-item">
+                                <div class="work-title">
+                                    <h2>siddiqians llc</h2>
+                                </div>
+                                <video src="./videos/siddiqians llc.mp4" loop autoplay preload="true" controls></video>
+
+                                <div class="work-description">
+                                    <details>
+                                        <summary>Siddiqians LLC is a professional website showcasing our services and
+                                            expertise. </summary>
+                                        <p>Designed with a clean, modern layout, it provides information about our
+                                            offerings and facilitates easy contact. Built with HTML, CSS, and
+                                            JavaScript, it highlights my ability to create functional, business-oriented
+                                            web solutions.
+
+                                        </p>
+                                    </details>
+                                    <h2>project links</h2>
+
+                                    <div class="links">
+
+
+                                        <div class="github-link">
+                                            <a href="https://github.com/zainabsiddiqui833251/siddiqiansllc.git"
+                                                target="_blank">
+                                                <i class="fa-brands fa-github"></i>
+                                                <h5>github</h5>
+                                            </a>
+                                        </div>
+                                        <div class="netlify-link">
+                                            <img src="https://cdn.worldvectorlogo.com/logos/netlify.svg"
+                                                alt="Netlify icon" width="30">
+                                            <i class="fa-brands fa-netlify"></i>
+                                            <h5>netlify</h5>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- page 4 -->
+            <div id="page4" class="paper">
+                <div class="front">
+                    <div id="front4" class="front-content">
+                        <div class="work-item">
+                            <div class="work-title">
+                                <h2>savory script</h2>
+                            </div>
+                            <video src="./videos/savory scripts.mp4" loop autoplay preload="true" controls></video>
+
+                            <div class="work-description">
+                                <details>
+                                    <summary>Savory Script is a recipe website I designed to provide users with an
+                                        engaging culinary experience.
+                                    </summary>
+                                    <p>
+                                        The site features an intuitive layout, allowing users to browse recipes, leave
+                                        comments, and rate dishes. With categories covering international and Pakistani
+                                        cuisines, it showcases my expertise in creating interactive, user-friendly
+                                        websites using HTML, CSS, and JavaScript.
+                                    </p>
+                                </details>
+                                <h2>project links</h2>
+
+                                <div class="links">
+
+
+                                    <div class="github-link">
+                                        <a href="https://github.com/zainabsiddiqui833251/savoryscripts.git"
+                                            target="_blank">
+                                            <i class="fa-brands fa-github"></i>
+                                            <h5>github</h5>
+                                        </a>
+                                    </div>
+                                    <div class="netlify-link">
+                                        <a href="https://helpful-churros-48222d.netlify.app" target="_blank">
+                                            <img src="https://cdn.worldvectorlogo.com/logos/netlify.svg"
+                                                alt="Netlify icon" width="30">
+                                            <h5>netlify</h5>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="back">
+                    <div id="back4" class="back-content">
+                        <div class="work-item">
+                            <div class="work-title">
+                                <h2>photos heaven</h2>
+                            </div>
+                            <video src="./videos/photo heaven.mp4" loop autoplay preload="true" controls></video>
+
+                            <div class="work-description">
+                                <details>
+                                    <summary>Photo Heaven is a photo gallery website showcasing a diverse image
+                                        collection. It features an easy-to-navigate grid layout and category filters.
+                                    </summary>
+                                    <p>Built with HTML, CSS, and JavaScript, it demonstrates my skills in creating
+                                        dynamic, user-friendly web experiences.
+
+                                    </p>
+                                </details>
+                                <h2>project links</h2>
+
+                                <div class="links">
+
+
+                                    <div class="github-link">
+                                        <a href="https://github.com/zainabsiddiqui833251/photo-heaven.git"
+                                            target="_blank">
+                                            <i class="fa-brands fa-github"></i>
+                                            <h5>github</h5>
+                                        </a>
+                                    </div>
+                                    <div class="netlify-link">
+                                        <a href="https://phenomenal-banoffee-1f7263.netlify.app" target="_blank">
+                                            <img src="https://cdn.worldvectorlogo.com/logos/netlify.svg"
+                                                alt="Netlify icon" width="30">
+                                            <h5>netlify</h5>
+
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- page 5 -->
+            <div id="page5" class="paper">
+                <div class="front">
+                    <div id="front5" class="front-content">
+                        <h1>contact</h1>
+                        <form action="" method="get">
+                            <label for="name">Name</label>
+                            <input type="text" placeholder="name" name="name" id="name" required>
+
+                            <label for="phone">Phone</label>
+                            <input type="tel" name="phone" placeholder="phone" id="phone" required>
+
+                            <label for="email">Email</label>
+                            <input type="email" placeholder="email" name="email" id="email" required>
+
+                            <label for="message">Message</label>
+                            <textarea name="message" placeholder="message" id="message" required></textarea>
+
+                            <button type="submit">submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="back5" class="back-content">
+
+                    </div>
+                </div>
+            </div>
+
         </div>
-        
+        <!-- book -->
+
+
+        <!-- next button -->
+        <button class="next"><i class="fa-solid fa-circle-right"></i></button>
+        <!-- next button -->
+
+    </div>
 
 
 
 
+    <!-- aos js links -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init(
+            {
+                offset: 300,
+                duration: 300,
+                easing: 'ease-in-out',
+                // delay: 300,
+            }
+        );
+    </script>
+    <!-- aos links -->
 
+    <!-- javascript link -->
     <script src="app.js"></script>
+    <!-- javascript link -->
+
+
 </body>
 
 </html>

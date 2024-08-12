@@ -1,0 +1,53 @@
+/* Media Queries */
+
+/* Large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .book {
+        width: 30vw;
+        height: 40vw;
+    }
+
+    .front-content button i,
+    .back-content button i {
+        font-size: 2.5vw;
+    }
+}
+
+/* Medium devices (tablets, 768px to 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .book {
+        width: 40vw;
+        height: 50vw;
+    }
+
+    .front-content button i,
+    .back-content button i {
+        font-size: 4vw;
+    }
+}
+
+/* Small devices (landscape phones, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .book {
+        width: 50vw;
+        height: 65vw;
+    }
+
+    .front-content button i,
+    .back-content button i {
+        font-size: 5vw;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    .book {
+        width: 70vw;
+        height: 90vw;
+    }
+
+    .front-content button i,
+    .back-content button i {
+        font-size: 6vw;
+    }
+}

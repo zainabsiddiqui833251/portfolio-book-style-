@@ -1,0 +1,488 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    /* background: linear-gradient(to bottom, #f0e6d2, #f9f5ec, #f0e6d2);   
+     overflow-y: hidden; 
+    background: linear-gradient(to bottom, #c2a680, #e0c7a3, #c2a680); /* Soft Brown gradient */
+    overflow-y: hidden;
+    background: linear-gradient(to bottom, #b4a99f, #cfcecd, #aaa39d);
+    /* Warm Gray gradient */
+}
+
+/* book */
+body #maincontent {
+    /* display: none; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book {
+    /* border: solid; */
+    position: relative;
+    width: 30vw;
+    height: 45vw;
+    transition: transform 0.5s;
+
+}
+
+.paper {
+    /* border: solid red; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+
+
+}
+
+.front,
+.back {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+    background-image: url(./img/book\ cover2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: solid #EDCF96;
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+}
+
+.back {
+    z-index: 0;
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 22px;
+}
+
+.back-content {
+    transform: rotateY(180deg);
+}
+
+/* button styling */
+
+#maincontent button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 1%;
+    transition: transform 0.5s;
+}
+
+#maincontent button:focus {
+    outline: none;
+}
+
+#maincontent button:hover {
+    color: rgb(68, 67, 67);
+}
+
+#maincontent button i {
+    font-size: 3vw;
+}
+
+/* paper stacking order */
+
+#page1 {
+    z-index: 5;
+}
+
+#page2 {
+    z-index: 4;
+}
+
+#page3 {
+    z-index: 3;
+}
+
+#page4 {
+    z-index: 2;
+}
+
+#page5 {
+    z-index: 1;
+}
+
+/* flipped effect */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+/* cover page */
+
+#cover {
+    background-image: url(./img/book\ cover.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-shadow: inset 1px 0px 0px black;
+
+    text-transform: capitalize;
+    text-align: center;
+    filter: saturate(135deg, 30%);
+
+}
+
+/* #cover:hover {
+    filter: grayscale(30%);
+} */
+#back1 a {
+    text-decoration: none;
+    text-align: center;
+    color: #1c1b29;
+    display: block;
+    margin: auto;
+    width: 40%;
+    border: solid;
+    padding: 1%;
+    border-radius: 12px;
+    background: linear-gradient(to right, #1c1b29, #8381a3, #1c1b29);
+    color: #EDCF96;
+}
+
+#cover .headings {
+    width: 80%;
+    margin: auto;
+    margin-top: 9%;
+    font-size: 2vw;
+    background: linear-gradient(to bottom, #EDCF96, #FFFACD);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: "Rubik Vinyl", system-ui;
+    font-weight: 400;
+}
+
+
+#cover .heading-bottom {
+    margin-top: 3%;
+    font-size: 1.4vw;
+    font-family: "Playfair Display SC", serif;
+    font-weight: 400;
+}
+
+#cover .heading-bottom h2 {
+    margin-bottom: 0.5em;
+    text-decoration: underline;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    transition: text-shadow 0.5s;
+    cursor: pointer;
+    font-weight: bolder;
+    background: linear-gradient(to bottom, #EDCF96, #FFFACD);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#cover .heading-bottom h4 ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cover .heading-bottom h4 ul li a {
+    /* color: white; */
+    font-size: 2.2vw;
+    /* padding: 5%; */
+    /* margin: 2%; */
+    background: linear-gradient(to bottom, #EDCF96, #FFFACD);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#cover .heading-bottom h4 ul li {
+    margin: 1%;
+    border: solid #EDCF96;
+    padding: 2%;
+    border-radius: 50%;
+    width: 4.5vw;
+}
+
+/* cover page */
+#back1 .image {
+    width: 70%;
+    height: 70%;
+    border: solid #5c212d;
+    margin: auto;
+    margin-top: 15%;
+    background-image: url(./img/profile\ pic.jpg);
+    background-size: 100% contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 24px;
+    filter: contrast(150%);
+}
+
+#back1 h1 {
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 3%;
+    font-size: 2vw;
+    background: linear-gradient(to right, #5c212d, #afb918);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+}
+
+#front2 {
+    padding: 5%;
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+#front2 h1,
+#back2 h1,
+#front3 h1,
+#back3 h1,
+#front4 h1,
+#back4 h1,
+#front5 h1 {
+    margin-bottom: 2%;
+    font-size: 3vw;
+    text-decoration: underline;
+    background: linear-gradient(to right, #5c212d, #afb918);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: capitalize;
+    text-align: center;
+    /* text-fill-color: transparent; */
+
+}
+
+#back2 p {
+    font-size: 1.2vw;
+    margin-bottom: 3%;
+}
+
+#front2 .skills img {
+    display: inline-block;
+    width: 20%;
+    height: 80px;
+}
+
+#back2 {
+    padding: 5%;
+
+}
+
+#back2 ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#back2 li {
+    margin: 3%;
+}
+
+.education .ed {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 5%;
+
+}
+
+.education .ed-icon i {
+    font-size: 2.7vw;
+    display: block;
+    margin: auto;
+
+}
+
+.education .ed-icon {
+    margin-right: 3%;
+    width: 18%;
+}
+
+.education .ed-desc {
+    width: 80%;
+    text-transform: capitalize;
+}
+
+#front3,
+#back3,
+#front4,
+#back4 {
+    margin: 5%;
+    margin-right: 8%;
+}
+
+
+#front3 .my-work,
+#back3 .my-work,
+#front4 .my-work,
+#back4 .my-work {
+    width: 100%;
+    margin: auto;
+}
+
+#front3 .my-work .work-item,
+#back3 .my-work .work-item,
+#front4 .my-work .work-item,
+#back4 .my-work .work-item {
+
+    width: 80%;
+    margin: auto;
+}
+
+.work-title h2,
+.work-item h2 {
+    text-align: center;
+    margin: 2%;
+    font-size: 2vw;
+    text-transform: capitalize;
+    background: linear-gradient(135deg, #1c1b29, #504b4b, rgb(151, 149, 149));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+}
+
+.back #back4 .work-item,
+.front #front4 .work-item {
+    width: 80%;
+    margin: auto;
+}
+
+.back #back4 .work-item video,
+.front #front4 .work-item video {
+    width: 100%;
+}
+
+#front3 .my-work .work-item video,
+#back3 .my-work .work-item video,
+#front4 .my-work .work-item video,
+#back4 .my-work .work-item video {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+#back5 {
+    background-image: url(./img/book\ cover.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.front .work-description,
+.back .work-description {
+    margin-top: 3%;
+}
+
+#front5 {
+    margin: 5%;
+}
+
+form {
+    border: solid;
+    width: 80%;
+    padding: 4%;
+    margin: auto;
+    margin-top: 3%;
+    border-radius: 15px;
+    background-color: #edce9648;
+}
+
+form label {
+    font-size: 1.5vw;
+    text-transform: capitalize;
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+form input,
+form textarea {
+    width: 90%;
+    height: 3vw;
+    display: block;
+    margin: auto;
+    padding: 2%;
+    text-transform: capitalize;
+    font-size: 1vw;
+}
+
+form textarea {
+    height: 7vw;
+}
+
+form button {
+    margin: auto;
+    width: 100%;
+    background-color: grey;
+    text-align: center;
+    font-size: 2vw;
+    text-transform: uppercase;
+    margin-top: 4%;
+    border: solid;
+}
+
+.work-description .links i {
+    font-size: 3vw;
+    color: black;
+
+}
+
+.work-description .links img {
+    width: 3vw;
+}
+
+.work-description .links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 2%;
+}
+
+.work-description .links a h5 {
+    color: black;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+/* book */
